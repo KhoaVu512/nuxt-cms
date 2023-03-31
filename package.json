@@ -1,0 +1,41 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "supabase-gen": "npx supabase gen types typescript --project-id kspyhzkwjwpncsymretq --schema public > database/types.ts"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^3.2.0",
+    "@nuxtjs/supabase": "^0.3.1",
+    "@sidebase/nuxt-auth": "^0.4.2",
+    "@types/node": "^18.15.0",
+    "nuxt": "^3.2.2",
+    "supabase": "^1.46.5"
+  },
+  "dependencies": {
+    "@dargmuesli/nuxt-cookie-control": "^5.2.1",
+    "@heroicons/vue": "^2.0.16",
+    "@nuxt/ui": "^0.4.1",
+    "@nuxtjs/tailwindcss": "^6.4.1",
+    "@supabase/supabase-js": "^2.12.1",
+    "autoprefixer": "^10.4.14",
+    "chart.js": "^4.2.1",
+    "chartjs": "^0.3.24",
+    "cookie-universal-nuxt": "^2.2.2",
+    "flowbite": "^1.6.4",
+    "flowbite-vue": "^0.0.10",
+    "generate": "^0.14.0",
+    "nuxt-headlessui": "^1.1.1",
+    "nuxt-icon": "^0.3.3",
+    "nuxt-icons": "^3.1.0",
+    "nuxt-vite": "nuxt/vite",
+    "postcss": "^8.4.21",
+    "postcss-nested": "^6.0.1",
+    "vue-chartjs": "^5.2.0",
+    "vue-scripts": "^0.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+node_modules
+.nuxt
+.output
+*.log
+database/types.ts
+.DS_Store
+.npmrc
