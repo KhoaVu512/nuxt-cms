@@ -41,6 +41,8 @@
 </template>
 
 <script setup lang="ts">
+import { Database } from '~~/database/types'
+
 
 
 const id = ref('')
@@ -51,20 +53,21 @@ const star = ref('')
 const comment = ref('')
 const loading = ref(false)
 
-const client = useSupabaseClient()
+const client = useSupabaseClient<Database>()
 const user = useSupabaseUser()
 const { data: todos } = await useFetch('/api/test')
 
 
 const addNewRows = async () => {
 	loading.value = true
-	type Prams = { name: string, comment: string }
-	const params = { name: name.value, comment: comment.value }
 	const { data } = await client.from('todos')
+		.upsert({ name: name.value, comment: comment.value })
 		.select('id, name, comment')
 		.single()
-	name.value.push(data)
-	comment.value.push(data)
+	if (data) {
+		name.value += data.name
+		comment.value += data.comment
+	}
 	loading.value = false
 }
 
