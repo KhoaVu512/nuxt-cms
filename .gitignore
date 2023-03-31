@@ -5,3 +5,4 @@ node_modules
 database/types.ts
 .DS_Store
 .npmrc
+.env
