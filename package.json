@@ -35,6 +35,7 @@
     "nuxt-vite": "nuxt/vite",
     "postcss": "^8.4.21",
     "postcss-nested": "^6.0.1",
+    "uuid": "^9.0.0",
     "vue-chartjs": "^5.2.0",
     "vue-scripts": "^0.0.0"
   }
